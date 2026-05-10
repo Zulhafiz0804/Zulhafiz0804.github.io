@@ -145,8 +145,8 @@ nav a:hover {
 
 .hero-content h1 {
     font-family: var(--font-heading);
-    font-size: 5.5rem;
-    font-weight: 800;
+    font-size: 3.5rem;
+    font-weight: 600;
     line-height: 1.1;
     margin-bottom: 1.5rem;
     animation: slideUp 0.8s ease-out;
@@ -159,20 +159,20 @@ nav a:hover {
 
 .hero-content .subtitle {
     font-family: var(--font-heading);
-    font-size: 2rem;
-    font-weight: 600;
+    font-size: 2.3rem;
+    font-weight: 700;
     color: #fff;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     animation: slideUp 0.8s ease-out 0.1s both;
 }
 
 .hero-content p {
     font-family: var(--font-heading);
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     font-weight: 500;
     color: #b0b0ff;
     margin-bottom: 2rem;
-    max-width: 600px;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
     animation: slideUp 0.8s ease-out 0.2s both;
@@ -682,6 +682,100 @@ footer {
     text-align: center;
     background: rgba(0, 0, 0, 0.5);
     border-top: 1px solid rgba(0, 212, 255, 0.2);
+}
+
+/* Certifications Section */
+.certifications {
+    padding: 5rem 2rem;
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.02), rgba(0, 153, 204, 0.02));
+}
+
+.certifications-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.cert-card {
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.05), rgba(0, 153, 204, 0.05));
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    border-radius: 15px;
+    padding: 2rem;
+    display: flex;
+    gap: 1.5rem;
+    transition: all 0.3s;
+}
+
+.cert-card:hover {
+    transform: translateY(-8px);
+    border-color: #00d4ff;
+    box-shadow: 0 15px 35px rgba(0, 212, 255, 0.15);
+}
+
+.cert-logo {
+    font-size: 3rem;
+    min-width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+.cert-logo img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.cert-content h3 {
+    color: #00d4ff;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.cert-issuer {
+    color: #fff;
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+.cert-date {
+    color: #b0b0ff;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.cert-id {
+    color: #8080a0;
+    font-size: 0.85rem;
+    font-family: 'Courier New', monospace;
+}
+
+.show-credential {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #00d4ff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+}
+
+.show-credential:hover {
+    color: #fff;
+    transform: translateX(3px);
 }
 
 @media (max-width: 768px) {
