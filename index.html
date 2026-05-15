@@ -134,6 +134,7 @@
                         </div>
                         <div class="project-buttons">
                             <a href="https://github.com/Zulhafiz0804/invoicing-tool" target="_blank" class="code-btn">Code</a>
+                            <a onclick="openDesignGallery('invoicing-tool')" class="design-btn">Design</a>
                         </div>
                     </div>
                 </div>
@@ -150,6 +151,7 @@
                         </div>
                         <div class="project-buttons">
                             <a href="https://github.com/Zulhafiz0804/expense-tracker" target="_blank" class="code-btn">Code</a>
+                            <a onclick="openDesignGallery('expense-tracker')" class="design-btn">Design</a>
                         </div>
                     </div>
                 </div>
@@ -166,6 +168,7 @@
                         </div>
                         <div class="project-buttons">
                             <a href="https://github.com/Zulhafiz0804/todo-app" target="_blank" class="code-btn">Code</a>
+                            <a onclick="openDesignGallery('todo-app')" class="design-btn">Design</a>
                         </div>
                     </div>
                 </div>
@@ -183,6 +186,7 @@
                         </div>
                         <div class="project-buttons">
                             <a href="https://github.com/Zulhafiz0804/Retail-Inventory" target="_blank" class="code-btn">Code</a>
+                            <a onclick="openDesignGallery('smartstocker')" class="design-btn">Design</a>
                         </div>
                     </div>
                 </div>
@@ -210,6 +214,7 @@
                         </div>
                         <div class="project-buttons">
                             <a href="https://github.com/Zulhafiz0804/Zakat-Calculator" target="_blank" class="code-btn">Code</a>
+                            <a onclick="openDesignGallery('zakat-calculator')" class="design-btn">Design</a>
                         </div>
                     </div>
                 </div>
@@ -388,6 +393,35 @@
         <p>&copy; 2026 Muhammad Zulhafiz Bin Norman. All rights reserved.</p>
     </footer>
 
+    <!-- Design Gallery Modal -->
+<div class="gal-overlay" id="galOverlay">
+    <div class="gal-modal">
+        <div class="gal-header">
+            <div class="gal-header-left">
+                <div class="gal-dot"></div>
+                <span class="gal-title" id="galTitle"></span>
+            </div>
+            <div class="gal-header-right">
+                <span class="gal-counter" id="galCounter"></span>
+                <button class="gal-close" id="galClose">✕</button>
+            </div>
+        </div>
+        <div class="gal-stage">
+            <img class="gal-img" id="galImg" src="" alt="">
+            <div class="gal-label" id="galLabel"></div>
+            <button class="gal-nav prev" id="galPrev">&#8249;</button>
+            <button class="gal-nav next" id="galNext">&#8250;</button>
+        </div>
+        <div class="gal-progress">
+            <div class="gal-fill" id="galFill"></div>
+        </div>
+        <div class="gal-thumbs" id="galThumbs"></div>
+        <div class="gal-footer">
+            <div class="gal-tags" id="galTags"></div>
+            <a class="gal-link" id="galLink" href="#" target="_blank">⌥ View code</a>
+        </div>
+    </div>
+</div>
     <script src="script.js"></script>
 </body>
 </html>
