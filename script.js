@@ -57,13 +57,13 @@ const designGalleries = {
         tags: ['React', 'Node.js', 'PostgreSQL'],
         github: 'https://github.com/Zulhafiz0804/invoicing-tool',
         images: [
-            { src: 'images/designs/invoicing_Sign_Up.png', label: 'Sign up' },
-            { src: 'images/designs/invoicing_Sign_In.png', label: 'Sign in' },
-            { src: 'images/designs/invoicing_Dashboard.png', label: 'Dashboard' },
-            { src: 'images/designs/invoicing_New_Invoice.png', label: 'New invoice' },
-            { src: 'images/designs/invoicing_Invoice_Details.png', label: 'Invoice details' },
-            { src: 'images/designs/invoicing_Add_Client.png', label: 'Add client' },
-            { src: 'images/designs/invoicing_Client_Details.png', label: 'Client details' },
+            { src: 'images/designs/Invoicing_Sign_Up.png', label: 'Sign up' },
+            { src: 'images/designs/Invoicing_Sign_In.png', label: 'Sign in' },
+            { src: 'images/designs/Invoicing_Dashboard.png', label: 'Dashboard' },
+            { src: 'images/designs/Invoicing_New_Invoice.png', label: 'New invoice' },
+            { src: 'images/designs/Invoicing_Invoice_Details.png', label: 'Invoice details' },
+            { src: 'images/designs/Invoicing_Add_Client.png', label: 'Add client' },
+            { src: 'images/designs/Invoicing_Client_Details.png', label: 'Client details' },
         ]
     },
     'expense-tracker': {
