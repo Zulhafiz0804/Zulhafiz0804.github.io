@@ -221,3 +221,20 @@ document.addEventListener('keydown', e => {
     if (e.key === 'ArrowRight') updateSlide(galCur + 1);
     if (e.key === 'ArrowLeft')  updateSlide(galCur - 1);
 });
+
+// Hamburger menu
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.getElementById('navMenu');
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    navMenu.classList.toggle('open');
+});
+
+// Close menu when a link is clicked
+navMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        navMenu.classList.remove('open');
+    });
+});

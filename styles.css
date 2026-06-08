@@ -747,36 +747,82 @@ footer {
     color: #fff;
     transform: translateX(3px);
 }
+.hamburger {
+    display: none;
+}
 
 @media (max-width: 768px) {
-    .hero-content h1 {
-        font-size: 2.5rem;
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 4px;
+        z-index: 1001;
+    }
+
+    .hamburger span {
+        display: block;
+        width: 25px;
+        height: 2px;
+        background: #00d4ff;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+
+    .hamburger.open span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .hamburger.open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.open span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
     }
 
     nav ul {
-        gap: 1rem;
-        font-size: 0.85rem;
+        display: none;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background: rgba(15, 12, 41, 0.98);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        z-index: 999;
+        transition: right 0.3s ease;
+        border-left: 1px solid rgba(0, 212, 255, 0.2);
     }
 
-    .about-content,
-    .contact-content {
-        grid-template-columns: 1fr;
+    nav ul.open {
+        display: flex;
+        right: 0;
     }
 
-    .portfolio-grid {
-        grid-template-columns: 1fr;
+    nav ul a {
+        font-size: 1.2rem;
     }
 
-    .expertise-grid {
-        grid-template-columns: 1fr;
+    .hero-content h1 {
+        font-size: 2rem;
+        letter-spacing: -1px;
     }
 
-    .journey-item {
-        grid-template-columns: 1fr;
+    .hero-content .subtitle {
+        font-size: 1.3rem;
     }
 
-    .journey-date {
-        text-align: left;
+    .hero-content p {
+        font-size: 1rem;
     }
 
     .cta-buttons {
@@ -788,6 +834,81 @@ footer {
     .secondary-button {
         width: 100%;
         max-width: 300px;
+    }
+
+    .about-content,
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+
+    .expertise-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .soft-skills {
+        margin: 1.5rem auto 0;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-buttons {
+        flex-direction: column;
+    }
+
+    .code-btn, .design-btn {
+        width: 100%;
+    }
+
+    .certifications-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cert-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .journey-item {
+        grid-template-columns: 1fr;
+    }
+
+    .journey-date {
+        text-align: left;
+    }
+
+    .gal-stage {
+        height: 280px;
+    }
+
+    .gal-img {
+        max-height: 250px;
+    }
+
+    .gal-thumb {
+        width: 50px;
+        height: 36px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .hero-content h1 {
+        font-size: 1.6rem;
+    }
+
+    .hero-content .subtitle {
+        font-size: 1.1rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .cert-card {
+        padding: 1.2rem;
     }
 }
 
