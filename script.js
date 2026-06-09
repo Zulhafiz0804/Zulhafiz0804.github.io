@@ -238,3 +238,17 @@ navMenu.querySelectorAll('a').forEach(link => {
         navMenu.classList.remove('open');
     });
 });
+
+// Avatar preview
+const navAvatar = document.getElementById('navAvatar');
+const avatarOverlay = document.getElementById('avatarOverlay');
+
+navAvatar.addEventListener('click', () => {
+    avatarOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+});
+
+avatarOverlay.addEventListener('click', () => {
+    avatarOverlay.classList.remove('active');
+    document.body.style.overflow = '';
+});
