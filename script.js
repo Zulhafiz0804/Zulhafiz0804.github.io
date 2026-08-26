@@ -124,6 +124,18 @@ const designGalleries = {
             { src: 'images/designs/Zakat5.png', label: 'Screen 5' },
         ]
     },
+    'noc-ledger': {
+        title: 'NOC Master Ledger',
+        tags: ['Python', 'Streamlit', 'Supabase', 'PostgreSQL'],
+        github: 'https://github.com/Zulhafiz0804',
+        images: [
+            { src: 'images/designs/NOC_1.png', label: 'Daily Cross-Check' },
+            { src: 'images/designs/NOC_2.png', label: 'View & Export Master' },
+            { src: 'images/designs/NOC_3.png', label: 'Database Setup' },
+            { src: 'images/designs/NOC_4.png', label: 'Audit Log' },
+            { src: 'images/designs/NOC_5.png', label: 'Analytics Dashboard' },
+        ]
+    },
 };
 
 // Gallery elements
