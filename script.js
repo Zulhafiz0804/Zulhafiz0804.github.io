@@ -68,15 +68,13 @@ const designGalleries = {
     },
     'expense-tracker': {
         title: 'Expense Tracker',
-        tags: ['Python', 'Streamlit', 'Pandas'],
-        github: 'https://github.com/Zulhafiz0804/expense-tracker',
+        tags: ['Flask', 'SQLite', 'PostgreSQL', 'REST API'],
+        github: 'https://github.com/Zulhafiz0804/calculate-expenses-app',
         images: [
-            { src: 'images/designs/Expense_Tracker1.png', label: 'Screen 1' },
-            { src: 'images/designs/Expense_Tracker2.png', label: 'Screen 2' },
-            { src: 'images/designs/Expense_Tracker3.png', label: 'Screen 3' },
-            { src: 'images/designs/Expense_Tracker4.png', label: 'Screen 4' },
-            { src: 'images/designs/Expense_Tracker5.png', label: 'Screen 5' },
-            { src: 'images/designs/Expense_Tracker6.png', label: 'Screen 6' },
+            { src: 'images/designs/Expences1.png', label: 'Screen 1' },
+            { src: 'images/designs/Expences2.png', label: 'Screen 2' },
+            { src: 'images/designs/Expences3.png', label: 'Screen 3' },
+            { src: 'images/designs/Expences4.png', label: 'Screen 4' },
         ]
     },
     'todo-app': {
