@@ -52,6 +52,17 @@ document.querySelectorAll('.about, .expertise, .portfolio, .journey, .contact').
 });
 
 const designGalleries = {
+    'jobtrail': {
+    title: 'JobTrail',
+    tags: ['React', 'Supabase', 'Tailwind CSS', 'Vite'],
+    github: 'https://github.com/Zulhafiz0804/jobtrail',
+    images: [
+        { src: 'images/projects/jobtrail-cover.png', label: 'Login screen' },
+        { src: 'images/designs/JobTrail_1.png', label: 'Kanban board' },
+        { src: 'images/designs/JobTrail_2.png', label: 'Dashboard' },
+    ]
+},
+
     'invoicing-tool': {
         title: 'Invoice Pro',
         tags: ['React', 'Node.js', 'PostgreSQL'],
