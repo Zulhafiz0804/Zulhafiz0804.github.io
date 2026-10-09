@@ -9,15 +9,16 @@
 <body>
     <!-- Navigation -->
     <nav>
-        <div class="logo">
-    <div class="logo">
-        <img src="images/profile2.png" alt="Zulhafiz" class="nav-avatar" id="navAvatar">Portfolio</div>        
-    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
-    </div>
+        <div class="nav-left">
+            <div class="logo">
+                <img src="images/profile2.png" alt="Zulhafiz" class="nav-avatar" id="navAvatar">Portfolio
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
         <ul id="navMenu">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -27,30 +28,60 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
+
     <!-- Avatar Preview Modal -->
     <div class="avatar-overlay" id="avatarOverlay">
         <div class="avatar-modal">
             <img src="images/profile2.png" alt="Muhammad Zulhafiz">
             <p>Muhammad Zulhafiz Bin Norman</p>
-            <span>Web Developer</span>
+            <span>Full-Stack Developer</span>
         </div>
     </div>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
-        <video class="hero-video" autoplay muted loop playsinline>
-            <source src="images/hero_background.mp4" type="video/mp4">
-        </video>
+<section class="hero" id="home">
+    <video class="hero-video" autoplay muted loop playsinline>
+        <source src="images/hero_background.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-inner">
         <div class="hero-content">
-            <h1>Muhammad Zulhafiz Bin Norman</h1>
-            <p class="subtitle">Bachelor in Information Technology (Hons.) | UiTM Kelantan</p>
-            <p>Building innovative digital solutions with a passion for software development, web applications, and emerging technologies</p>
+            <p class="hero-greeting">Hello, I'm</p>
+            <h1>Muhammad Zulhafiz<br>Bin Norman</h1>
+            <div class="hero-role">
+                <span>I'm a </span>
+                <span id="typingRole" class="typing-text"></span>
+                <span class="cursor">|</span>
+            </div>
+            <p class="hero-desc">Building innovative digital solutions with a passion for software development, web applications, and emerging technologies</p>
             <div class="cta-buttons">
                 <a href="#portfolio" class="cta-button">View My Work</a>
                 <a href="#contact" class="secondary-button">Get In Touch</a>
             </div>
         </div>
-    </section>
+        <div class="hero-image-side">
+            <div class="hero-photo-wrap">
+                <img src="images/profile2.jpeg" alt="Muhammad Zulhafiz" class="hero-profile">
+                <div class="stat-card stat-card-1">
+                    <span class="stat-num">9+</span>
+                    <span class="stat-label">Projects Built</span>
+                </div>
+                <div class="stat-card stat-card-2">
+                    <span class="stat-num">3.55</span>
+                    <span class="stat-label">CGPA</span>
+                </div>
+                <div class="stat-card stat-card-3">
+                    <span class="stat-num">4+</span>
+                    <span class="stat-label">Years Coding</span>
+                </div>
+                <div class="stat-card stat-card-4">
+                    <span class="stat-num">4</span>
+                    <span class="stat-label">Certifications</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- About Section -->
     <section class="about" id="about">
@@ -58,7 +89,7 @@
         <div class="about-content">
             <div class="about-text">
                 <h2>Who I Am</h2>
-                <p>I'm an Information Technology graduate with a strong foundation in software development, database management, and system administration. With a CGPA of 3.47 and consistent Dean's List recognition, I'm committed to excellence in every project I undertake.</p>
+                <p>I'm an Information Technology graduate with a strong foundation in software development, database management, and system administration. With a CGPA of 3.55 and consistent Dean's List recognition, I'm committed to excellence in every project I undertake.</p>
                 <p>My hands-on experience spans web development, mobile applications, IT support, and emerging technologies like Augmented Reality. I'm passionate about creating innovative solutions that solve real-world problems while continuously learning and adapting to new technologies.</p>
             </div>
             <div class="about-image">
@@ -100,7 +131,7 @@
                 <div class="expertise-card">
                     <div class="expertise-icon">📊</div>
                     <h3>Data Analysis & Tools</h3>
-                    <p>Microsoft Excel (Data Analysis, Pivot Tables, Data Cleaning), Tableau, Power Bi, Git, Visual Studio Code - Data-driven insights and development tools</p>
+                    <p>Microsoft Excel (Data Analysis, Pivot Tables, Data Cleaning), Tableau, Power BI, Git, Visual Studio Code - Data-driven insights and development tools</p>
                 </div>
             </div>
 
@@ -137,25 +168,25 @@
             <h2 class="section-title">Featured <span class="highlight">Projects</span></h2>
             <div class="portfolio-grid">
                 <div class="portfolio-item">
-    <div class="portfolio-image">
-        <img src="images/projects/jobtrail-cover.png" alt="JobTrail">
-    </div>
-    <div class="portfolio-info">
-        <h3>JobTrail — Job Application Tracker</h3>
-        <p>A kanban-based job application tracker for job seekers. Drag and drop applications across status columns, get reminders for upcoming interviews, and track your search funnel on an analytics dashboard. Built with React, Supabase auth, and Row Level Security so each user only sees their own data.</p>
-        <div class="project-tags">
-            <span class="tag">React</span>
-            <span class="tag">Supabase</span>
-            <span class="tag">Tailwind CSS</span>
-            <span class="tag">Vite</span>
-            <span class="tag">Recharts</span>
-        </div>
-        <div class="project-buttons">
-            <a href="https://github.com/Zulhafiz0804/jobtrail" target="_blank" class="code-btn">Code</a>
-            <a onclick="openDesignGallery('jobtrail')" class="design-btn">Design</a>
-        </div>
-    </div>
-</div>
+                    <div class="portfolio-image">
+                        <img src="images/projects/jobtrail-cover.png" alt="JobTrail">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>JobTrail — Job Application Tracker</h3>
+                        <p>A kanban-based job application tracker for job seekers. Drag and drop applications across status columns, get reminders for upcoming interviews, and track your search funnel on an analytics dashboard. Built with React, Supabase auth, and Row Level Security so each user only sees their own data.</p>
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Supabase</span>
+                            <span class="tag">Tailwind CSS</span>
+                            <span class="tag">Vite</span>
+                            <span class="tag">Recharts</span>
+                        </div>
+                        <div class="project-buttons">
+                            <a href="https://github.com/Zulhafiz0804/jobtrail" target="_blank" class="code-btn">Code</a>
+                            <a onclick="openDesignGallery('jobtrail')" class="design-btn">Design</a>
+                        </div>
+                    </div>
+                </div>
                 <div class="portfolio-item">
                     <div class="portfolio-image">
                         <img src="images/projects/invoice-cover.webp" alt="Invoice Pro">
@@ -181,7 +212,7 @@
                         <img src="images/projects/expenses-cover.jpeg" alt="Expense Tracker">
                     </div>
                     <div class="portfolio-info">
-                        <h3>Expense Tracker</h3>
+                        <h3>Calculate Expense</h3>
                         <p>Mobile-friendly expense tracker with a Flask backend and custom tagging system. Features a REST API for expense and tag management, SQLite and PostgreSQL dual database support, and automatic schema migration on startup.</p>
                         <div class="project-tags">
                             <span class="tag">Flask</span>
@@ -203,7 +234,7 @@
                         <h3>Todo List Web Application</h3>
                         <p>Full-stack task management app with user authentication, search, filtering, and statistics dashboard built with Java Spring Boot and React.</p>
                         <div class="project-tags">
-                            <span class="tag">JavaScript, CSS, Java, HTML</span>
+                            <span class="tag">JavaScript</span>
                             <span class="tag">React</span>
                             <span class="tag">Java Spring Boot</span>
                             <span class="tag">PostgreSQL</span>
@@ -220,7 +251,7 @@
                     </div>
                     <div class="portfolio-info">
                         <h3>SmartStocker: Inventory Management System</h3>
-                        <p>QR code-based inventory management system for fast product lookup and real-time stock tracking</p>
+                        <p>QR code-based inventory management system for fast product lookup and real-time stock tracking.</p>
                         <div class="project-tags">
                             <span class="tag">Java</span>
                             <span class="tag">QR Code</span>
@@ -240,7 +271,7 @@
                     </div>
                     <div class="portfolio-info">
                         <h3>ScienceGenius with Augmented Reality</h3>
-                        <p>E-learning platform for Year 6 science students with AR technology for interactive learning and quiz sessions</p>
+                        <p>E-learning platform for Year 6 science students with AR technology for interactive learning and quiz sessions.</p>
                         <div class="project-tags">
                             <span class="tag">Augmented Reality</span>
                             <span class="tag">Android</span>
@@ -254,7 +285,7 @@
                     </div>
                     <div class="portfolio-info">
                         <h3>Zakat Calculator</h3>
-                        <p>Islamic financial calculator for computing Zakat obligations with user-friendly interface and accurate calculations</p>
+                        <p>Islamic financial calculator for computing Zakat obligations with user-friendly interface and accurate calculations.</p>
                         <div class="project-tags">
                             <span class="tag">Web App</span>
                             <span class="tag">Calculator</span>
@@ -266,7 +297,7 @@
                         </div>
                     </div>
                 </div>
-               <div class="portfolio-item">
+                <div class="portfolio-item">
                     <div class="portfolio-image">
                         <img src="images/projects/finance-cover.jpeg" alt="Finance Tracker">
                     </div>
@@ -315,7 +346,7 @@
             <div class="certifications-grid">
                 <div class="cert-card">
                     <div class="cert-logo">
-                        <img src="images/forage-logo.jpeg" alt="Deloitte Logo" class="cert-logo-img">
+                        <img src="images/forage-logo.jpeg" alt="Forage Logo" class="cert-logo-img">
                     </div>
                     <div class="cert-content">
                         <h3>Deloitte Data Analytics Job Simulation</h3>
@@ -326,7 +357,7 @@
                 </div>
                 <div class="cert-card">
                     <div class="cert-logo">
-                        <img src="images/google-logo.jpeg" alt="Deloitte Logo" class="cert-logo-img">
+                        <img src="images/google-logo.jpeg" alt="Google Logo" class="cert-logo-img">
                     </div>
                     <div class="cert-content">
                         <h3>Google Data Analytics Professional Certificate</h3>
@@ -337,7 +368,7 @@
                 </div>
                 <div class="cert-card">
                     <div class="cert-logo">
-                        <img src="images/google-logo.jpeg" alt="Deloitte Logo" class="cert-logo-img">
+                        <img src="images/google-logo.jpeg" alt="Google Logo" class="cert-logo-img">
                     </div>
                     <div class="cert-content">
                         <h3>Google AI Professional Certificate</h3>
@@ -348,13 +379,23 @@
                 </div>
                 <div class="cert-card">
                     <div class="cert-logo">
-                        <img src="images/google-logo.jpeg" alt="Deloitte Logo" class="cert-logo-img">
+                        <img src="images/google-logo.jpeg" alt="Google Logo" class="cert-logo-img">
                     </div>
                     <div class="cert-content">
                         <h3>Google Cybersecurity Certificate</h3>
                         <p class="cert-issuer">Google</p>
                         <p class="cert-date">Issued Jul 2026</p>
                         <a href="#" class="show-credential">Show credential →</a>
+                    </div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-logo">
+                        <img src="images/pepper_labs_logo.jpg" alt="Pepper Labs Logo" class="cert-logo-img">
+                    </div>
+                    <div class="cert-content">
+                        <h3>K-Youth Development Programme 2026: Cohort 3</h3>
+                        <p class="cert-issuer">Pepper Labs Social Enterprise</p>
+                        <p class="cert-date">Issued Oct 2026</p>
                     </div>
                 </div>
             </div>
@@ -487,34 +528,35 @@
     </footer>
 
     <!-- Design Gallery Modal -->
-<div class="gal-overlay" id="galOverlay">
-    <div class="gal-modal">
-        <div class="gal-header">
-            <div class="gal-header-left">
-                <div class="gal-dot"></div>
-                <span class="gal-title" id="galTitle"></span>
+    <div class="gal-overlay" id="galOverlay">
+        <div class="gal-modal">
+            <div class="gal-header">
+                <div class="gal-header-left">
+                    <div class="gal-dot"></div>
+                    <span class="gal-title" id="galTitle"></span>
+                </div>
+                <div class="gal-header-right">
+                    <span class="gal-counter" id="galCounter"></span>
+                    <button class="gal-close" id="galClose">✕</button>
+                </div>
             </div>
-            <div class="gal-header-right">
-                <span class="gal-counter" id="galCounter"></span>
-                <button class="gal-close" id="galClose">✕</button>
+            <div class="gal-stage">
+                <img class="gal-img" id="galImg" src="" alt="">
+                <div class="gal-label" id="galLabel"></div>
+                <button class="gal-nav prev" id="galPrev">&#8249;</button>
+                <button class="gal-nav next" id="galNext">&#8250;</button>
             </div>
-        </div>
-        <div class="gal-stage">
-            <img class="gal-img" id="galImg" src="" alt="">
-            <div class="gal-label" id="galLabel"></div>
-            <button class="gal-nav prev" id="galPrev">&#8249;</button>
-            <button class="gal-nav next" id="galNext">&#8250;</button>
-        </div>
-        <div class="gal-progress">
-            <div class="gal-fill" id="galFill"></div>
-        </div>
-        <div class="gal-thumbs" id="galThumbs"></div>
-        <div class="gal-footer">
-            <div class="gal-tags" id="galTags"></div>
-            <a class="gal-link" id="galLink" href="#" target="_blank">⌥ View code</a>
+            <div class="gal-progress">
+                <div class="gal-fill" id="galFill"></div>
+            </div>
+            <div class="gal-thumbs" id="galThumbs"></div>
+            <div class="gal-footer">
+                <div class="gal-tags" id="galTags"></div>
+                <a class="gal-link" id="galLink" href="#" target="_blank">⌥ View code</a>
+            </div>
         </div>
     </div>
-</div>
+
     <script src="script.js"></script>
 </body>
 </html>

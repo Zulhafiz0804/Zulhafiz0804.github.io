@@ -2,15 +2,12 @@
 document.querySelector('.contact-form').addEventListener('submit', function(e) {
     e.preventDefault();
     
-    // Get form values
     const name = this.querySelector('input[type="text"]').value;
     const email = this.querySelector('input[type="email"]').value;
     const message = this.querySelector('textarea').value;
     
-    // Show success message
     alert(`Thank you ${name}! Your message has been received. I'll get back to you at ${email} soon.`);
     
-    // Reset form
     this.reset();
 });
 
@@ -43,7 +40,6 @@ const observer = new IntersectionObserver(function(entries) {
     });
 }, observerOptions);
 
-// Observe all sections
 document.querySelectorAll('.about, .expertise, .portfolio, .journey, .contact').forEach(section => {
     section.style.opacity = '0';
     section.style.transform = 'translateY(20px)';
@@ -53,16 +49,15 @@ document.querySelectorAll('.about, .expertise, .portfolio, .journey, .contact').
 
 const designGalleries = {
     'jobtrail': {
-    title: 'JobTrail',
-    tags: ['React', 'Supabase', 'Tailwind CSS', 'Vite'],
-    github: 'https://github.com/Zulhafiz0804/jobtrail',
-    images: [
-        { src: 'images/projects/jobtrail-cover.png', label: 'Login screen' },
-        { src: 'images/designs/JobTrail_1.png', label: 'Kanban board' },
-        { src: 'images/designs/JobTrail_2.png', label: 'Dashboard' },
-    ]
-},
-
+        title: 'JobTrail',
+        tags: ['React', 'Supabase', 'Tailwind CSS', 'Vite'],
+        github: 'https://github.com/Zulhafiz0804/jobtrail',
+        images: [
+            { src: 'images/projects/jobtrail-cover.png', label: 'Login screen' },
+            { src: 'images/designs/JobTrail_1.png', label: 'Kanban board' },
+            { src: 'images/designs/JobTrail_2.png', label: 'Dashboard' },
+        ]
+    },
     'invoicing-tool': {
         title: 'Invoice Pro',
         tags: ['React', 'Node.js', 'PostgreSQL'],
@@ -169,9 +164,9 @@ function updateSlide(n) {
 
     galImg.classList.add('fade-out');
     setTimeout(() => {
-        galImg.src         = galImgs[galCur].src;
-        galImg.alt         = galImgs[galCur].label;
-        galLabel.textContent  = galImgs[galCur].label;
+        galImg.src             = galImgs[galCur].src;
+        galImg.alt             = galImgs[galCur].label;
+        galLabel.textContent   = galImgs[galCur].label;
         galCounter.textContent = (galCur + 1) + ' / ' + galImgs.length;
         galFill.style.width    = ((galCur + 1) / galImgs.length * 100) + '%';
         galThumbs.querySelectorAll('.gal-thumb').forEach((t, i) => {
@@ -190,23 +185,19 @@ function openDesignGallery(key) {
     galImgs = project.images;
     galCur  = 0;
 
-    // Populate header
     galTitle.textContent   = project.title + ' — Design Gallery';
     galCounter.textContent = '1 / ' + galImgs.length;
     galLink.href           = project.github;
 
-    // First image
-    galImg.src   = galImgs[0].src;
-    galImg.alt   = galImgs[0].label;
-    galLabel.textContent = galImgs[0].label;
-    galFill.style.width  = (1 / galImgs.length * 100) + '%';
+    galImg.src             = galImgs[0].src;
+    galImg.alt             = galImgs[0].label;
+    galLabel.textContent   = galImgs[0].label;
+    galFill.style.width    = (1 / galImgs.length * 100) + '%';
 
-    // Tags
     galTags.innerHTML = project.tags
         .map(t => `<span class="gal-tag">${t}</span>`)
         .join('');
 
-    // Thumbnails
     galThumbs.innerHTML = galImgs
         .map((im, i) => `
             <div class="gal-thumb ${i === 0 ? 'on' : ''}" data-i="${i}">
@@ -218,7 +209,6 @@ function openDesignGallery(key) {
         t.addEventListener('click', () => updateSlide(+t.dataset.i));
     });
 
-    // Show nav arrows only if more than 1 image
     galPrev.style.display = galImgs.length > 1 ? 'flex' : 'none';
     galNext.style.display = galImgs.length > 1 ? 'flex' : 'none';
 
@@ -252,7 +242,6 @@ hamburger.addEventListener('click', () => {
     navMenu.classList.toggle('open');
 });
 
-// Close menu when a link is clicked
 navMenu.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
         hamburger.classList.remove('open');
@@ -273,3 +262,40 @@ avatarOverlay.addEventListener('click', () => {
     avatarOverlay.classList.remove('active');
     document.body.style.overflow = '';
 });
+
+// Typing animation
+const roles = [
+    'Software Developer',
+    'Web Developer',
+    'Data Analyst',
+    'UI/UX Enthusiast',
+    'Full-Stack Developer'
+];
+
+let roleIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+const typingEl = document.getElementById('typingRole');
+
+function typeRole() {
+    const current = roles[roleIndex];
+
+    if (isDeleting) {
+        typingEl.textContent = current.substring(0, charIndex - 1);
+        charIndex--;
+    } else {
+        typingEl.textContent = current.substring(0, charIndex + 1);
+        charIndex++;
+    }
+
+    if (!isDeleting && charIndex === current.length) {
+        setTimeout(() => isDeleting = true, 1500);
+    } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        roleIndex = (roleIndex + 1) % roles.length;
+    }
+
+    setTimeout(typeRole, isDeleting ? 60 : 100);
+}
+
+if (typingEl) typeRole();
