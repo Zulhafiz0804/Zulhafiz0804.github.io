@@ -335,6 +335,9 @@ nav a:hover {
     animation-duration: 6.5s;
     animation-delay: 0.5s;
 }
+.stat-cards-mobile {
+    display: none;
+}
 
 @keyframes slideUp {
     from {
@@ -348,11 +351,6 @@ nav a:hover {
 }
 
 /* ===== ABOUT ===== */
-.about {
-    padding: 5rem 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
 
 .section-title {
     font-size: 2.5rem;
@@ -452,9 +450,17 @@ nav a:hover {
 }
 
 .expertise-icon {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    display: inline-block;
+    font-size: 2.2rem;
+    margin-bottom: 1.2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    background: rgba(0, 212, 255, 0.1);
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    color: #00d4ff;
 }
 
 .expertise-card h3 {
@@ -696,6 +702,12 @@ nav a:hover {
     gap: 1rem;
     font-size: 1.3rem;
 }
+.journey-category h3 i {
+    font-size: 1.2rem;
+    vertical-align: middle;
+    margin-right: 6px;
+    color: #00d4ff;
+}
 
 .journey-category h3::before {
     content: '';
@@ -834,6 +846,13 @@ nav a:hover {
 }
 
 .contact-detail a:hover {
+    color: #00d4ff;
+}
+
+.contact-detail strong i {
+    font-size: 1rem;
+    vertical-align: middle;
+    margin-right: 6px;
     color: #00d4ff;
 }
 
@@ -1172,6 +1191,223 @@ footer {
 
 .gal-link:hover { background: rgba(0, 212, 255, 0.1); }
 
+/* ===== SECTION ORBS ===== */
+.about {
+    position: relative;
+    overflow: hidden;
+    padding: 5rem 2rem;
+    max-width: 100%;
+    margin: 0;
+    border-top: 1px solid rgba(0, 212, 255, 0.06);
+}
+
+.about::before {
+    content: '';
+    position: absolute;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(0,212,255,0.22), transparent);
+    border-radius: 50%;
+    top: -100px; right: -80px;
+    filter: blur(35px);
+    animation: orbDrift 9s ease-in-out infinite alternate;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.about::after {
+    content: '';
+    position: absolute;
+    width: 300px; height: 300px;
+    background: radial-gradient(circle, rgba(120,80,255,0.18), transparent);
+    border-radius: 50%;
+    bottom: -80px; left: -60px;
+    filter: blur(30px);
+    animation: orbDrift 12s ease-in-out infinite alternate-reverse;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.about-content {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about .section-title {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3rem;
+}
+
+.expertise {
+    position: relative;
+    overflow: hidden;
+}
+
+.expertise::before {
+    content: '';
+    position: absolute;
+    width: 450px; height: 450px;
+    background: radial-gradient(circle, rgba(0,153,204,0.2), transparent);
+    border-radius: 50%;
+    bottom: -120px; right: -100px;
+    filter: blur(40px);
+    animation: orbDrift 11s ease-in-out infinite alternate;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.expertise::after {
+    content: '';
+    position: absolute;
+    width: 250px; height: 250px;
+    background: radial-gradient(circle, rgba(0,212,255,0.16), transparent);
+    border-radius: 50%;
+    top: -60px; left: 30%;
+    filter: blur(25px);
+    animation: orbDrift 8s ease-in-out infinite alternate-reverse;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.expertise-container,
+.soft-skills {
+    position: relative;
+    z-index: 1;
+}
+
+.portfolio {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio::before {
+    content: '';
+    position: absolute;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(0,212,255,0.2), transparent);
+    border-radius: 50%;
+    top: -100px; left: -80px;
+    filter: blur(35px);
+    animation: orbDrift 10s ease-in-out infinite alternate;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.portfolio::after {
+    content: '';
+    position: absolute;
+    width: 300px; height: 300px;
+    background: radial-gradient(circle, rgba(80,40,200,0.2), transparent);
+    border-radius: 50%;
+    bottom: -80px; right: 10%;
+    filter: blur(30px);
+    animation: orbDrift 13s ease-in-out infinite alternate-reverse;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.portfolio-container {
+    position: relative;
+    z-index: 1;
+}
+
+.certifications {
+    position: relative;
+    overflow: hidden;
+}
+
+.certifications::before {
+    content: '';
+    position: absolute;
+    width: 350px; height: 350px;
+    background: radial-gradient(circle, rgba(0,212,255,0.2), transparent);
+    border-radius: 50%;
+    top: -80px; right: 15%;
+    filter: blur(32px);
+    animation: orbDrift 10s ease-in-out infinite alternate;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.certifications-container {
+    position: relative;
+    z-index: 1;
+}
+
+.journey {
+    position: relative;
+    overflow: hidden;
+}
+
+.journey::before {
+    content: '';
+    position: absolute;
+    width: 380px; height: 380px;
+    background: radial-gradient(circle, rgba(0,212,255,0.2), transparent);
+    border-radius: 50%;
+    top: -80px; right: -60px;
+    filter: blur(35px);
+    animation: orbDrift 9s ease-in-out infinite alternate;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.journey::after {
+    content: '';
+    position: absolute;
+    width: 280px; height: 280px;
+    background: radial-gradient(circle, rgba(100,60,255,0.18), transparent);
+    border-radius: 50%;
+    bottom: -60px; left: -40px;
+    filter: blur(28px);
+    animation: orbDrift 11s ease-in-out infinite alternate-reverse;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.journey-container {
+    position: relative;
+    z-index: 1;
+}
+
+.contact {
+    position: relative;
+    overflow: hidden;
+}
+
+.contact::before {
+    content: '';
+    position: absolute;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(0,212,255,0.22), transparent);
+    border-radius: 50%;
+    bottom: -150px; right: -100px;
+    filter: blur(40px);
+    animation: orbDrift 14s ease-in-out infinite alternate;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.contact-container {
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes orbDrift {
+    from { transform: translate(0, 0); }
+    to   { transform: translate(25px, -20px); }
+}
+
+/* Section dividers */
+.about, .expertise, .portfolio, .certifications, .journey, .contact {
+    border-top: 1px solid rgba(0, 212, 255, 0.06);
+}
+
 /* ===== MEDIA QUERIES ===== */
 @media (min-width: 769px) {
     .hamburger {
@@ -1252,15 +1488,16 @@ footer {
         font-size: 1.2rem;
     }
 
-    .hero {
+        .hero-inner {
         flex-direction: column;
-        padding: 100px 2rem 3rem;
+        align-items: center;
         text-align: center;
-        justify-content: center;
+        gap: 2rem;
     }
 
     .hero-content {
         text-align: center;
+        max-width: 100%;
     }
 
     .hero-content h1 {
@@ -1291,7 +1528,44 @@ footer {
     }
 
     .hero-image-side {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        width: 100%;
+    }
+
+    .hero-photo-wrap {
+        width: 200px;
+        height: 200px;
+        position: relative;
+    }
+
+    .hero-profile {
+        width: 200px;
+        height: 200px;
+    }
+
+    .stat-card-1,
+    .stat-card-2,
+    .stat-card-3,
+    .stat-card-4 {
         display: none;
+    }
+
+    .stat-cards-mobile {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.8rem;
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .stat-cards-mobile .stat-card {
+        position: static;
+        animation: none;
+        display: flex;
+        min-width: unset;
     }
 
     .about-content,
